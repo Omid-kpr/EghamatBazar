@@ -1,9 +1,9 @@
-import CardProvider from '@/components/CardProvider'
+import CardProvider from '@/components/Card View/CardProvider'
 import Header from '@/components/Header'
 import Search from '@/components/Search'
 import Wrapper from '@/components/Wrapper'
-import ActiveMenu from '@/components/ActiveMenu'
-import data from '../fakeDb/fakeData.json';
+import ActiveMenu from '@/components/Menu/ActiveMenu'
+import data from '../public/fakeData.json';
 
 export default function Home() {
   const activeData = data.filter(item => item.active === true);
@@ -18,7 +18,7 @@ export default function Home() {
       <Wrapper>
         <Header />
         <ActiveMenu isActive={isActive} activeCount={activeCount} notActiveCount={notActiveCount} />
-        <CardProvider isActive={isActive} data={isActive ? activeData : notActiveData} />
+        <CardProvider data={isActive ? activeData : notActiveData} />
       </Wrapper>
     </>
   )
