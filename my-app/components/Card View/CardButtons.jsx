@@ -24,14 +24,14 @@ const CardButtons = ({ isActive, id }) => {
     };
 
     return (
-        <div className="flex justify-center w-[80%] max-w-96 mt-4">
-            <Button variant="secondary" className="text-md text-black w-1/3 mx-1">
+        <div className="flex justify-center items-center w-full h-[30%] max-w-96 pt-3">
+            <Button variant="secondary" className="text-md text-black w-1/3 h-[50%] mx-1">
                 ویرایش
                 <FaRegEdit style={{ fontSize: "1em" }} className='ml-2' />
             </Button>
             <button
                 onClick={clickHandler}
-                className={cn("text-md text-white w-2/3 mx-1 p-0 rounded-sm flex justify-center items-center",
+                className={cn("text-md text-white w-2/3 h-[50%] mx-1  rounded-sm flex justify-center items-center",
                     isActive ? "bg-red-500" : "bg-green-500",
                     isLoading ? 'opacity-50 cursor-not-allowed' : '')}
                 disabled={isLoading}>
