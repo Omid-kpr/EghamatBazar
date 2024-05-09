@@ -1,22 +1,24 @@
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
 import { FaPlus } from "react-icons/fa6";
+import ClientNavigationButton from "@/utils/ClientNavigationButton";
 
 
 
-const ShowMore = ({ isActive, endCount, categoryCount }) => {
+
+
+const ShowMore = ({ categoryCount, endCount }) => {
     const bigger = categoryCount < endCount
-    console.log(categoryCount, endCount, bigger)
+    const Query = {
+        name: "endCount",
+        value: `${endCount + 6}`
+    }
+
     return (
         <div className='flex justify-center items-center h-16 mb-20'>
             <div className={bigger ? "hidden" : "flex justify-center border-2 rounded-sm w-80"}>
-                <Link
-                    className="flex items-center text-black py-1"
-                    href={`?active=${isActive}&endCount=${endCount + 6}`}>
-
+                <ClientNavigationButton classname="flex items-center text-black py-1" query={Query}>
                     مشاهده بیشتر
                     <FaPlus size="0.9em" className='ml-2' />
-                </Link>
+                </ClientNavigationButton>
             </div>
         </div>
     )

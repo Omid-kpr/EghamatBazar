@@ -12,7 +12,6 @@ export async function POST(req, res) {
 
     // Update the active property
     const index = data.findIndex((item) => item.id === id);
-    console.log(data[index]);
     data[index].active = !data[index].active;
 
     // Write the updated data back

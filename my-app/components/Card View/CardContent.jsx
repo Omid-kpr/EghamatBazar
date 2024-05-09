@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils'
+import Image from 'next/image';
 import React from 'react'
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
@@ -7,7 +8,7 @@ const CardContent = ({ item }) => {
     const tagColor = item.active ? "bg-green-500" : "bg-red-500"
     return (
         <div className="relative flex flex-col items-center justify-between w-full h-[70%]">
-            <img src={item.imageUrl} alt='location image' className="absolute -z-10 w-full h-full rounded-lg" />
+            <Image src={item.imageUrl} width={300} height={300} alt='location image' className="absolute -z-10 w-full h-full rounded-lg" />
             <div className={cn("absolute right-5 top-3 flex items-center justify-center w-16 h-6  rounded-full", tagColor)}>
                 <div className="flex items-center ">
                     <h3 className='text-gray-100 text-xs font-bold'>{item.active ? "فعال" : "غیرفعال"}</h3>
