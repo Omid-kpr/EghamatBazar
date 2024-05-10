@@ -7,8 +7,12 @@ import ShowMore from '@/components/ShowMore'
 import data from '../public/fakeData.json';
 
 export default function Home({ searchParams }) {
-  const isActive = searchParams.active === "false" ? false : true;
+  const Query = searchParams.q === undefined ? '' : searchParams.q;
+  let results = [];
+  Query === '' ? results = []
+    : results = data.filter(item => item.name.toLowerCase().includes(Query.toLowerCase())).slice(0, 4)
   const isSearching = searchParams.search
+  const isActive = searchParams.active === "false" ? false : true;
   const endCount = searchParams.endCount === undefined ? 6 : Number(searchParams.endCount);
   let activeData = data.filter(item => item.active === true);
   let notActiveData = data.filter(item => item.active === false);
@@ -20,7 +24,7 @@ export default function Home({ searchParams }) {
 
   return (
     <>
-      <Search isSearching={isSearching} />
+      <Search isSearching={isSearching} results={results} />
       <Wrapper>
         <Header />
         <ActiveMenu isActive={isActive} activeCount={activeCount} notActiveCount={notActiveCount} />
