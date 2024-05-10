@@ -1,5 +1,5 @@
 import CardProvider from '@/components/Card View/CardProvider'
-import Header from '@/components/Header'
+import Header from '@/components/Header/Header'
 import Search from '@/components/Search/Search'
 import Wrapper from '@/components/Wrapper'
 import ActiveMenu from '@/components/Menu/ActiveMenu'
