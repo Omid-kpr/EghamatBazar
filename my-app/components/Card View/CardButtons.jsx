@@ -14,7 +14,7 @@ const CardButtons = ({ isActive, id }) => {
     const clickHandler = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.post('/api/updateData', { id });
+            const response = await axios.patch('/api/updateData', { id });
             console.log(response.data); // Handle the response as needed
         } catch (error) {
             console.error('Error updating isActive:', error);

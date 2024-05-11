@@ -12,7 +12,7 @@ const SearchResults = ({ isSearching, results }) => {
                     </div>
                     : results.map((result) => (
                         <div key={result.id} className="flex justify-between md:justify-around border-b items-center mx-10  h-24">
-                            <Image src={result.imageUrl} width={80} height={80} className='rounded-sm' />
+                            <Image src={result.imageUrl} alt='image' width={80} height={80} className='rounded-sm' />
                             <p>{result.name}</p>
 
                         </div>
