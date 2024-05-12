@@ -11,7 +11,7 @@ const CardContent = ({ item }) => {
             <Image src={item.imageUrl} width={300} height={300} alt='location image' className="absolute -z-10 w-full h-full rounded-lg" />
             <div className={cn("absolute right-5 top-3 flex items-center justify-center w-16 h-6  rounded-full", tagColor)}>
                 <div className="flex items-center ">
-                    <h3 className='text-gray-100 text-xs font-bold'>{item.active ? "فعال" : "غیرفعال"}</h3>
+                    <h3 className='text-gray-100 text-xs '>{item.active ? "فعال" : "غیرفعال"}</h3>
                     {item.active ? <IoIosCheckmarkCircleOutline style={{ fontSize: "1.1em", color: "white" }} className='ml-1' /> :
                         <IoIosCloseCircleOutline style={{ fontSize: "1.1em", color: "white" }} className='ml-1' />
                     }

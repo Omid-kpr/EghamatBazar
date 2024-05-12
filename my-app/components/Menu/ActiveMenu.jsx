@@ -3,7 +3,7 @@ import ActiveButton from './ActiveButton'
 
 const ActiveMenu = ({ isActive, activeCount, notActiveCount }) => {
     return (
-        <div className="flex mt-8 justify-center">
+        <div className="flex mt-8 justify-center sm:justify-end">
             <ActiveButton isActive={isActive} count={activeCount} lable="فعال" />
             <ActiveButton isActive={!isActive} count={notActiveCount} lable="غیر فعال" />
         </div>

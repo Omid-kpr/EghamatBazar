@@ -70,7 +70,7 @@ const AddForm = () => {
                     id: getRandomID(1000000),
                     imageUrl: "http://picsum.photos/300?random=17"
                 });
-                console.log(response.data); // Handle the response as needed
+                console.log(response.data);
             } catch (error) {
                 console.error('Error updating isActive:', error);
             } finally {
@@ -79,11 +79,14 @@ const AddForm = () => {
         },
     })
 
-    // console.log(formik.errors)
 
     const typeOptions = ["شهری", "روستایی", "جنگلی", "کوهستانی", "ساحلی"]
     const zoneOptions = ["منطقه ۱", "منطقه ۲", "منطقه ۳", "منطقه ۴", "منطقه ۵", "منطقه ۶",]
     const CapacityOptions = [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+
+
 
     return (
         <form onSubmit={formik.handleSubmit}>

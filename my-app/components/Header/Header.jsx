@@ -14,7 +14,7 @@ const Header = () => {
             <div className="hidden sm:block">
                 <AddCardDesktop />
             </div>
-            <div className="flex items-center text-sm">
+            <div className="flex items-center text-sm font-medium">
                 <h2>لیست اقامتگاه های من</h2>
                 <FaHome style={{ fontSize: "1.3em" }} className='ml-2 pb-1' />
             </div>

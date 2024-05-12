@@ -67,7 +67,7 @@ const SearchBar = () => {
                     value={text}
                     onFocus={() => setIsSearching(true)}
                     onChange={e => setText(e.target.value)}
-                    className="bg-gray-100 text-end text-sm placeholder:text-gray-600 pr-10"
+                    className="bg-gray-100 text-end text-xs placeholder:text-gray-600 pr-10"
                     placeholder="جستجوی اقامتگاه ها" />
                 <FaSearch className="absolute right-3" style={style} />
             </div>

@@ -15,7 +15,7 @@ const ShowMore = ({ categoryCount, endCount }) => {
     return (
         <div className='flex justify-center items-center h-16 mb-20'>
             <div className={bigger ? "hidden" : "flex justify-center border-2 rounded-sm w-80"}>
-                <ClientNavigationButton classname="flex items-center text-black py-1" query={Query}>
+                <ClientNavigationButton classname="flex text-sm items-center text-black py-1" query={Query}>
                     مشاهده بیشتر
                     <FaPlus size="0.9em" className='ml-2' />
                 </ClientNavigationButton>
